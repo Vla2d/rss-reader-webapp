@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8" />
+   <title>RSS</title>
+</head>
+
+<body>
+   <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="modal_title">Modal title</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal_body">
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="modal_close">Close</button>
+               <a type="button" href="#" class="btn btn-primary full-article" target="_blank" id="modal_link">Link</a>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <main>
+      <section class="container-fluid bg-dark p-5">
+         <div class="row">
+            <div class="col-md-10 col-lg-8 mx-auto text-white">
+               <h1 class="display-3 mb-0">RSS агрегатор</h1>
+               <p class="lead">Начните читать RSS сегодня! Это легко, это красиво.</p>
+               <form action="" class="rss-form text-body">
+                  <div class="row"> 
+                     <div class="col">
+                        <div class="form-floating"><input id="url_input" autofocus required name="url" aria-label="url"
+                              class="form-control w-100" autocomplete="off"> <label for="url-input"
+                              class=" mb-0 text-muted">URL</label></div>
+                     </div>
+                     <div class="col-auto"><button type="submit" aria-label="add"
+                           class="h-100 btn btn-lg btn-primary px-sm-5" id="add_button">Добавить</button></div>
+                  </div>
+                  <p id="info_text" class="text-danger m-0 d-none"></p>
+               </form>
+               <p class="mt-2 mb-0 text-muted" id="example_text">Пример:</p>
+               <p class="mt-2 mb-0 text-muted" id="link_text">https://ru.hexlet.io/lessons.rss <br> https://www.feedforall.com/sample.xml <br> http://lorem-rss.herokuapp.com/feed?unit=second</p>
+               <p class="feedback m-0 position-absolute small text-danger"></p>
+            </div>
+         </div>
+      </section>
+      <section class="container-fluid container-xxl p-5">
+         <div class="row d-none" id="main_container">
+            <div class="col-md-10 col-lg-8 order-1 mx-auto">
+               <h2 class="text-center" id="posts_title">Posts</h2>
+               <ul id="posts_list"></ul>
+            </div>
+            <div class="col-md-10 col-lg-4 mx-auto order-0 order-lg-1">
+               <h2 class="text-center" id="feeds_title">Feeds</h2>
+               <ul id="feeds_list"></ul>
+            </div>
+         </div>
+      </section>
+   </main>
+</body>
+
+</html>
